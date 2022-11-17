@@ -94,7 +94,7 @@
 	
 	<distributionManagement>
 	
-	    <releaserepository>
+	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
 	      <url>http://18.220.41.114:8081/repository/walmart-release/</url>
