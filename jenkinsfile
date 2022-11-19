@@ -3,7 +3,7 @@ node
 def mavenHome = tool name: "maven3.6.2"
 properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '3', daysToKeepStr: '', numToKeepStr: '3'))])
 
- stage('checkoutcode')
+ stage('checkout')
  {
   git branch: 'development', credentialsId: 'fb9d4807-a4cd-4225-bb77-f0aa8ae15d3a', url: 'https://github.com/nadiyapavan/maven-web-application.git'
  }
