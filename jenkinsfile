@@ -7,7 +7,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
  {
   git branch: 'development', credentialsId: 'fb9d4807-a4cd-4225-bb77-f0aa8ae15d3a', url: 'https://github.com/nadiyapavan/maven-web-application.git'
  }
- /*
+
  stage('Build')
  {
   sh "${mavenHome}/bin/mvn package"
@@ -30,7 +30,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.15.174.150:/opt/tomcat9/webapps/"
  }
  }
-
+ /*
  stage('sendemailnotification')
  {
  mail bcc: '', body: '''Jenkins integration
