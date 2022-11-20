@@ -93,7 +93,7 @@
 	</dependencies>
 	
 	<distributionManagement>
-	
+            <!--	
 	    <repository>
 	      <id>nexus</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
@@ -105,7 +105,7 @@
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
 	      <url>http://3.19.241.243:8081/repository/pipelinesnapshot/</url>
 	    </snapshotRepository>
-	    
+	    -->
 	</distributionManagement>
 	
 	<build>
