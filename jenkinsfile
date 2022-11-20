@@ -12,7 +12,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
  {
   sh "${mavenHome}/bin/mvn package"
  }
- 
+ /*
  stage('ExcuteSonarReport')
  {
   sh "${mavenHome}/bin/mvn clean sonar:sonar"
@@ -30,7 +30,7 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.15.174.150:/opt/tomcat9/webapps/"
  }
  }
- /*
+ 
  stage('sendemailnotification')
  {
  mail bcc: '', body: '''Jenkins integration
