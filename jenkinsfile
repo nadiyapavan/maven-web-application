@@ -15,7 +15,9 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
  
  stage('ExcuteSonarReport')
  {
-  sh "${mavenHome}/bin/mvn clean sonar:sonar"
+  withSonarQubeEnv('SonarQubeserver') {
+         sh "${mavenHome}/bin/mvn clean sonar:sonar"
+       }
  }
  /*
  stage('UploadArtifactintoNexus')
