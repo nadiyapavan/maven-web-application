@@ -12,12 +12,12 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
  {
   sh "${mavenHome}/bin/mvn package"
  }
- /*
+ 
  stage('ExcuteSonarReport')
  {
   sh "${mavenHome}/bin/mvn clean sonar:sonar"
  }
- 
+ /*
  stage('UploadArtifactintoNexus')
  {
   sh "${mavenHome}/bin/mvn clean deploy" 
